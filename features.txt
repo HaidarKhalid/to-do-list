@@ -1,0 +1,6 @@
+dark light mode                  D0NE
+delete item                      DONE
+reorder items
+put a colors to choose from it for the item
+sfx on or off 
+editing the text

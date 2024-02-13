@@ -1,0 +1,129 @@
+:root {/* 
+    --firstColor: rgb(235, 235, 235);
+    --secondColor: rgb(34, 34, 34); */
+    
+    --firstColor: rgb(235, 235, 235);
+    --secondColor: rgb(34, 34, 34);
+    --firstColorDeeper: white;
+    --secondColorDeeper: black;
+}
+* {
+    box-sizing: border-box;
+}
+*, *::after,*::before {
+    font-family: 'Shadows Into Light', cursive;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--firstColor);
+    color: var(--secondColor);
+    text-align: center;
+    overflow-x:hidden;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+/****************** upper div *****************/
+/* main div */
+#control-div {
+    background-color: var(--firstColor);
+    display: inline-block;
+    position: relative;
+    margin-top: 5vh;
+    padding: 2vw 5vw;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--secondColor);
+    border: 4px solid var(--firstColorDeeper);
+}
+#name-header {
+    text-shadow: 0 0 4px var(--secondColor);
+    font-size: 230%;
+}
+
+/* Input  */
+#item-input {
+    background: var(--secondColor);
+    color: var(--firstColor);
+    position: relative;
+    top: 1vh;
+    border: 3px double var(--firstColor);
+    border-radius: 40px;
+    padding: 0.7vw 1.5vh;
+    font-size: 120%;
+    font-weight: bold;
+    text-indent: 5px;
+    margin-bottom: 10px;
+    display: block;
+
+}
+#item-input::placeholder {
+    color: var(--firstColor);
+}
+#add-button {
+    color: var(--firstColor);
+    font-weight: bold;
+    font-size: 150%;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--firstColorDeeper);
+    margin: 10px 0;
+    background-color: var(--secondColor);
+}
+/* SVGs */
+.blub-svg, .settings-svg {
+    width:50px;
+    position: absolute;
+    top: -20px;
+    z-index: 1;
+    background-color: var(--firstColor);
+    cursor: pointer;
+}
+.blub-svg {
+    right: -20px;
+    rotate: 30deg;
+}
+.settings-svg {
+    left: -20px;
+    rotate: -30deg;
+}
+
+/******************* list **********************/
+#items-list {
+    box-shadow: 0 0 0 2px var(--firstColorDeeper);
+    border: 4px solid var(--secondColorDeeper);
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 30px;
+    text-align: left;
+    padding: 15px 0px;
+}
+.item-list { 
+    position: relative;
+    list-style: none;
+    font-size: 25px;
+    font-weight:600;
+    margin: 10px 15px;
+    border-bottom: 2px dotted var(--secondColorDeeper);
+    text-decoration: underline;
+    text-decoration-thickness: 2;
+    text-underline-offset: 10px;
+}
+
+.delete-svg {
+    position: absolute;
+    top: 25%;
+    right: -20%;
+    width: 25px;
+    cursor: pointer;
+}
+
+.completed-True {
+    text-decoration: line-through underline;
+    text-decoration-color: rgb(0, 194, 42);
+    text-decoration-thickness: 4px;
+}
+
+.dragging-item {
+    opacity: 0.6;
+}
