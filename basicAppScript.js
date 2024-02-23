@@ -215,11 +215,12 @@ function putColorsContainer(index) {
         <button onclick="changeColorOfTask(${index},'Gold')" style="background-color: Gold;">Gold</button>
         <button onclick="changeColorOfTask(${index}, 'rgb(223, 168, 177)')" style="background-color: rgb(223, 168, 177);">Pink</button>
         <button onclick="changeColorOfTask(${index},'Green')" style="background-color: Green;">Green</button>
-        <button onclick="changeColorOfTask(${index},'rgb(35, 35, 255)')" style="background-color: rgb(35, 35, 255);">Blue</button>
+        <button onclick="changeColorOfTask(${index},'rgb(45, 45, 255)')" style="background-color: rgb(45, 45, 255);">Blue</button>
     </div>`
 }
 
 function hideNshowColorsContainer(index) {
+    if (!editingNow) {
     let container = document.querySelector(`.container${index}`)
     if (container.classList[2] == 'itsHidden') {
         container.classList.remove('itsHidden');
@@ -230,12 +231,13 @@ function hideNshowColorsContainer(index) {
         container.classList.remove('itsFlex');
         container.style.display = 'none';
     }
-
+}
 }
 function changeColorOfTask(index,color) {
     console.log(index, color)
     tasksObj[index]['color'] = color
     localStorage.setItem('tasks',JSON.stringify(tasksObj))
+    editingNow = false
     toggleSettings(false)
 }
 ///////// Add old tasks saved in the localstorage

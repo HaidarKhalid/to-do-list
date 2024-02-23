@@ -1,0 +1,6 @@
+dark light mode                  D0NE
+delete item                      DONE
+reorder items                    Canseled -> A lot of bugs and its so hard in vinalla js
+put a colors to choose from it for the item
+sfx on or off                    DONE 
+editing the text                 DONE
