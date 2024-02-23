@@ -4,8 +4,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
     <!-- Page seetings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +16,15 @@
 <body>
     <div id="control-div">
         <img onclick="switchModes()" class="blub-svg" src="images/light-bulb-black.svg">
-        <img class="settings-svg" src="images/configuration-gear-black.svg">
+        <img onclick="toggleSettings(true)" class="settings-svg" src="images/configuration-gear-black.svg">
         <h1 id="name-header">To-Do List</h1>
         <input type="text" name="item" id="item-input" placeholder="Wash dishes">
         <button  onclick="addToList()" id="add-button">Add</button>
+        <small class="small-note note-en">Note: Click on task to edit</small>
+        <small class="small-note note-ar">ملاحظة: اضغط على المهمة لتعديلها</small>
     </div>
     <div>
         <ul id="items-list">
-
         </ul>
     </div>
 
