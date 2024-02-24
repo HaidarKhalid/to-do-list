@@ -246,6 +246,10 @@ addOldTasks()
 switchModes('no')
 ///////// resize the list box and the colors box
 let colorsButtonsDiv = document.querySelector('.colors-container')
-setInterval(()=>{
+addEventListener('load',()=>{
     itemsList.style.width = (controlDiv.offsetWidth) + 'px'
-},1000)
+})
+addEventListener("resize",()=>{
+    itemsList.style.width = (controlDiv.offsetWidth) + 'px'
+
+})
