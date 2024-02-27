@@ -102,7 +102,7 @@ function deleteTask(indexOfTask) {
 function clickOnTask(indexOfTask) {
     if (inSettings && !editingNow && document.querySelector(`.container${indexOfTask}`).classList[2] == 'itsHidden') {
         let taskClicked = document.querySelector(`.iNumber${indexOfTask}`)
-        taskClicked.innerHTML = `<input class="editing-input editing-task${indexOfTask}" type="text" onkeydown="inputKeyDown(event,${indexOfTask})"/><img onclick="editTask(${indexOfTask})" class="beside-svg" src="media/images/save-edit.svg" alt="Edit this task">`
+        taskClicked.innerHTML = `<input class="editing-input editing-task${indexOfTask}" type="text" onkeydown="inputKeyDown(event,${indexOfTask})"/><img onclick="editTask(${indexOfTask})" class="beside-svg" src="media/images/save-edit.svg" alt="Ok">`
         tasksObj = JSON.parse(localStorage.getItem("tasks"))
         document.querySelector(`.editing-task${indexOfTask}`).value = tasksObj[indexOfTask]['task']
         taskClicked.style = 'animation: 2s flashingBorder linear infinite'
@@ -180,7 +180,7 @@ function addOldTasks() {
     if(localStorage.getItem("tasks") && Object.keys(JSON.parse(localStorage.getItem("tasks"))).length > 0) {
         tasksObj = JSON.parse(localStorage.getItem("tasks"))
         for (let task in tasksObj){
-            itemsList.innerHTML += `<li class="item-list iNumber${task} ${tasksObj[task]['completed'] == true ? 'completed-True': 'completed-False'}"><p style="color: ${colorFunction(tasksObj[task]["color"])};" onclick='clickOnTask(${task})'>${tasksObj[task]['task']}</p><img onclick="deleteTask(${task})" class="beside-svg" src="media/images/eraser.svg" alt="Delete this task"></li>`
+            itemsList.innerHTML += `<li class="item-list iNumber${task} ${tasksObj[task]['completed'] == true ? 'completed-True': 'completed-False'}"><p style="color: ${colorFunction(tasksObj[task]["color"])};" onclick='clickOnTask(${task})'>${tasksObj[task]['task']}</p><img onclick="deleteTask(${task})" class="beside-svg" src="media/images/eraser.svg" alt="X"></li>`
         }
     } else {
         localStorage.setItem('tasks',"{}")
