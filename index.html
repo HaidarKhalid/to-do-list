@@ -14,6 +14,27 @@
     <script src="basicAppScript.js" defer></script>
 </head>
 <body>
+    <div class="blur-bg"></div>
+    <div class="info-container">
+        <img onclick="showInfo()" class="info-svg" src="media/images/info-black.svg" alt="Info">
+        <div class="info-text" dir="rtl">
+            <p>
+                تم تطوير هذا الموقع والمشروع بواسطة حيدر خالد<br>
+                احد طلاب ثانوية الجندي الباسل للمتفوقين <br>
+            </p>
+            <ol class="info-list">
+                <li>1- اللغات المستخدمة في هذا المشروع هي (HTML, CSS, JavaScript)</li>
+                <li>
+                    2- تم استعمال تقنية الـlocal storage لحفظ المهام المضافة <br>
+                     الى الحاسوب لإعادة اظهارها مرة اخرى عند غلق وفتح الصفحة 
+                </li>
+                <li>3- استخدام اصدار ES6 من لغة JavaScript</li>
+                <li>4- يمكنكم الضغط على ايقونة الاعدادات في الجهة اليسرى للتعديل على المهام</li>
+                <li>5- ومن على الجهة اليمنى يمكنكم اختيار من الوضع الداكن والوضع الفاتح (Dark/Light)</li>
+                <li>6- للذهاب الى الموقع الالكتروني الشخصي الخاص بي عبر الرابط: <a href="https://www.HaidarKhalid.site" target="_blank">www.HaidarKhalid.site</a></li>
+            </ol>
+        </div>
+    </div>
     <div id="control-div">
         <img onclick="switchModes()" class="blub-svg" src="images/light-bulb-black.svg">
         <img onclick="toggleSettings(true)" class="settings-svg" src="images/configuration-gear-black.svg">

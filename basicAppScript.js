@@ -5,15 +5,32 @@ let controlDiv = document.getElementById('control-div')
 
 let blubSvg = document.querySelector('.blub-svg')
 let settingsSvg = document.querySelector('.settings-svg')
+let infoText = document.querySelector('.info-text')
+let infoSvg = document.querySelector('.info-svg')
+let blurbg = document.querySelector('.blur-bg')
 
 
 let noItemsInList = false
 let darkMode = false
+let infoAppear = false
 
 let tasksObj;
 
 let inSettings = false
 let editingNow = false
+
+function showInfo() {
+    if (!infoAppear) {
+        infoText.style.display = 'block'
+        blurbg.style.display = 'block'
+        infoAppear = true
+    }else if (infoAppear) {
+        infoText.style.display = 'none'
+        blurbg.style.display = 'none'
+        infoAppear = false
+    }
+}
+
 
 function addToList() {
     if (!inSettings) {
@@ -65,6 +82,7 @@ function switchModes(wannaChange) {
             document.documentElement.style.setProperty("--secondColorDeeper", "black")
             blubSvg.src = "media/images/light-bulb-black.svg"
             settingsSvg.src = "media/images/configuration-gear-black.svg"
+            infoSvg.src = "media/images/info-black.svg"
         }
         else if (cOA == '01' || cOA == '11') {
             document.documentElement.style.setProperty("--firstColor", "rgb(34, 34, 34)")
@@ -73,6 +91,7 @@ function switchModes(wannaChange) {
             document.documentElement.style.setProperty("--secondColorDeeper", "white")
             blubSvg.src = "media/images/light-bulb-white.svg"
             settingsSvg.src = "media/images/configuration-gear-white.svg"
+            infoSvg.src = "media/images/info-white.svg"
         }
     }
     toggleSettings(false)
